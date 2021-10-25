@@ -6,7 +6,7 @@
   "background_color": "#fff",
   "description": "A readable Hacker News app.",
   "icons": [{
-    "src": "./logo.jpg",
+    "src": "./logo-192x.jpg",
     "sizes": "192x192",
     "type": "image/png"
   }]
