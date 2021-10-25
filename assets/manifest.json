@@ -2,7 +2,7 @@
   "name": "Cat Gallery",
   "short_name": "Cats",
   "start_url": "/",
-  "scope": ".",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#fca911",
   "description": "Cat Gallery",
