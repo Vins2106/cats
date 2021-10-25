@@ -1,0 +1,157 @@
+:root {
+	--primary: #000000;
+	--secondary: #14213d;
+	--third: #fca911;
+	--text: #ffffff;
+	--text-hover: #bababa;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	color: var(--text);
+}
+
+html, body {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--primary);
+	margin: 0;
+	padding: 0 20px;
+}
+
+.images {
+	margin: 0 auto;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: self-start;
+	width: 100%;
+}
+
+.image {
+	min-height: 500px;
+	min-width: 300px;
+	max-height: 500px;
+	max-width: 300px;
+	margin: 5px;
+	border-radius: 4px;
+	background: linear-gradient(90deg, #eee 8%, #ddd 18%, #eee 33%);
+	animation: animasibg 1.5s ease infinite;
+	background-size: 500% 500%;
+	object-fit: cover;
+	cursor: pointer;
+}
+
+.offline {
+    position: fixed;
+    background: var(--third);
+    padding: 10px 20px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.offline-text {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header {
+	min-height: 100px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.line-b::after {
+	content: "";
+	display: block;
+	border-bottom: 4px solid var(--third);
+	width: 40%;
+	margin: 5px auto 0 auto;
+}
+
+.load-box {
+    width: 50px;
+    height: 50px;
+    border-top: 8px solid var(--third);
+    border-bottom: 8px solid var(--third);
+    border-left: 8px solid var(--third);
+    border-radius: 50%;
+    border-right: 8px solid transparent;
+    animation: animasiloading 2s ease infinite;
+}
+
+.loading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.image-options {
+    position: fixed;
+    background: var(--third);
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 200px;
+    margin: ;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+.image-opt {
+    color: var(--primary);
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 4px;
+    text-align: center;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.image-opt.close-img-opt {
+	text-align: right;
+}
+
+.image-opt:hover {
+    background: rgb(0,0,0,0.2);
+}
+
+.hidden {
+	transform: scale(0);
+}
+
+@keyframes animasiloading {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes animasibg {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
