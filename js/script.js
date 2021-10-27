@@ -4,8 +4,6 @@ let loading = document.getElementById("loading");
 let options = document.getElementById("opt")
 let item = document.getElementById("item");
 
-ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production, registrationStrategy: 'registerImmediately' })
-
 window.onload = () => {
 
 	let isOnline = navigator.onLine;
